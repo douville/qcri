@@ -1,0 +1,1399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20161205 14:32:01.331" generator="Robot 3.0 (Python 2.7.11 on win32)">
+<suite source="C:\SuiteA" id="s1" name="SuiteA">
+<suite source="C:\SuiteA\SampleRobotFrameworkTest.txt" id="s1-s1" name="SampleRobotFrameworkTest">
+<test id="s1-s1-t1" name="Sample Test">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.robotframework.org</arg>
+</arguments>
+<msg timestamp="20161205 14:32:01.469" level="INFO">Opening browser 'firefox' to base url 'http://www.robotframework.org'</msg>
+<status status="PASS" endtime="20161205 14:32:05.419" starttime="20161205 14:32:01.468"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Robot Framework</arg>
+</arguments>
+<msg timestamp="20161205 14:32:05.541" level="INFO">Current page contains text 'Robot Framework'.</msg>
+<status status="PASS" endtime="20161205 14:32:05.541" starttime="20161205 14:32:05.440"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20161205 14:32:05.612" starttime="20161205 14:32:05.545"></status>
+</kw>
+<doc>A sample test.</doc>
+<status status="PASS" endtime="20161205 14:32:05.613" critical="yes" starttime="20161205 14:32:01.468"></status>
+</test>
+<test id="s1-s1-t2" name="Another Test">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.seleniumhq.org</arg>
+</arguments>
+<msg timestamp="20161205 14:32:05.615" level="INFO">Opening browser 'firefox' to base url 'http://www.seleniumhq.org'</msg>
+<status status="PASS" endtime="20161205 14:32:08.715" starttime="20161205 14:32:05.615"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Selenium</arg>
+</arguments>
+<msg timestamp="20161205 14:32:08.811" level="INFO">Current page contains text 'Selenium'.</msg>
+<status status="PASS" endtime="20161205 14:32:08.811" starttime="20161205 14:32:08.724"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20161205 14:32:08.883" starttime="20161205 14:32:08.816"></status>
+</kw>
+<doc>Another test.</doc>
+<status status="PASS" endtime="20161205 14:32:08.884" critical="yes" starttime="20161205 14:32:05.614"></status>
+</test>
+<status status="PASS" endtime="20161205 14:32:08.885" starttime="20161205 14:32:01.359"></status>
+</suite>
+<suite source="C:\SuiteA\SuiteB" id="s1-s2" name="SuiteB">
+<suite source="C:\SuiteA\SuiteB\SampleRobotFrameworkTest.txt" id="s1-s2-s1" name="SampleRobotFrameworkTest">
+<test id="s1-s2-s1-t1" name="Sample Test Child">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.robotframework.org</arg>
+</arguments>
+<msg timestamp="20161205 14:32:08.894" level="INFO">Opening browser 'firefox' to base url 'http://www.robotframework.org'</msg>
+<status status="PASS" endtime="20161205 14:32:12.122" starttime="20161205 14:32:08.894"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Robot Framework</arg>
+</arguments>
+<msg timestamp="20161205 14:32:12.225" level="INFO">Current page contains text 'Robot Framework'.</msg>
+<status status="PASS" endtime="20161205 14:32:12.225" starttime="20161205 14:32:12.125"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20161205 14:32:12.295" starttime="20161205 14:32:12.230"></status>
+</kw>
+<doc>A sample test.</doc>
+<status status="PASS" endtime="20161205 14:32:12.296" critical="yes" starttime="20161205 14:32:08.893"></status>
+</test>
+<status status="PASS" endtime="20161205 14:32:12.297" starttime="20161205 14:32:08.890"></status>
+</suite>
+<suite source="C:\SuiteA\SuiteB\SampleRobotFrameworkTestNegative.txt" id="s1-s2-s2" name="SampleRobotFrameworkTestNegative">
+<test id="s1-s2-s2-t1" name="Negative Test">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.robotframework.org</arg>
+</arguments>
+<msg timestamp="20161205 14:32:12.304" level="INFO">Opening browser 'firefox' to base url 'http://www.robotframework.org'</msg>
+<status status="PASS" endtime="20161205 14:32:15.362" starttime="20161205 14:32:12.304"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Robot Framewrk</arg>
+</arguments>
+<msg timestamp="20161205 14:32:15.590" level="INFO">&lt;!DOCTYPE html&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" lang="en"&gt;&lt;head&gt;
+    &lt;meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /&gt;
+    &lt;meta content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" name="viewport" /&gt;
+    &lt;title&gt;Robot Framework&lt;/title&gt;
+    &lt;link href="css/bootstrap.css" type="text/css" rel="stylesheet" /&gt;
+    &lt;link href="css/bootstrap-responsive.css" type="text/css" rel="stylesheet" /&gt;
+    &lt;link href="css/robotframework.css" type="text/css" rel="stylesheet" /&gt;
+    &lt;link href="css/small-screens.css" media="only screen and (max-width: 1000px), only screen and (max-device-width: 1000px)" type="text/css" rel="stylesheet" /&gt;
+    &lt;link href="css/small-devices.css" media="only screen and (max-width: 598px), only screen and (max-device-width: 598px)" type="text/css" rel="stylesheet" /&gt;
+    &lt;link href="css/pygments.css" type="text/css" rel="stylesheet" /&gt;
+    &lt;script id="twitter-wjs" src="http://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;script src="js/jquery.js" type="text/javascript"&gt;&lt;/script&gt;
+    &lt;script src="js/bootstrap.js" type="text/javascript"&gt;&lt;/script&gt;
+    &lt;script src="js/robotframework.js" type="text/javascript"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body data-offset="70" data-spy="scroll"&gt;
+    &lt;div class="row green"&gt;
+      &lt;div class="content-area" id="header"&gt;
+        &lt;div class="cf" id="main-headers-container"&gt;
+          &lt;div id="main-headers"&gt;
+            &lt;h1&gt;ROBOT FRAMEWORK&lt;/h1&gt;
+            &lt;hr /&gt;
+            &lt;span id="main-headers-slogan" class="slogan"&gt;
+              Generic test automation framework for acceptance testing and ATDD
+            &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div id="main-logo"&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id="menu-container" class="row dark"&gt;
+      &lt;div class="navbar affix-top" id="menu"&gt;
+        &lt;div class="navbar-inner"&gt;
+          &lt;ul class="nav cf"&gt;
+            &lt;li&gt;&lt;a href="#introduction"&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#examples"&gt;Examples&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#test-libraries"&gt;Test libraries&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#tools"&gt;Tools&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#documentation"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#support-contact"&gt;Support &amp;amp; Contact&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id="introduction" class="row"&gt;
+      &lt;div class="content-area"&gt;
+        &lt;div class="column two-thirds introduction-text"&gt;
+          &lt;p&gt;
+            &lt;b&gt;Robot Framework&lt;/b&gt; is a generic test automation framework for
+            acceptance testing and acceptance test-driven development
+            (ATDD). It has easy-to-use tabular test data syntax and it
+            utilizes the keyword-driven testing approach. Its testing
+            capabilities can be extended by test libraries implemented
+            either with Python or Java, and users can create new
+            higher-level keywords from existing ones using the same
+            syntax that is used for creating test cases.
+          &lt;/p&gt;
+          &lt;p&gt;
+            Robot Framework project is hosted on
+            &lt;a target="_blank" href="https://github.com/robotframework/robotframework"&gt;GitHub&lt;/a&gt;
+            where you can find further documentation,
+            source code, and issue tracker. Downloads are hosted at
+            &lt;a target="_blank" href="https://pypi.python.org/pypi/robotframework"&gt;PyPI&lt;/a&gt;.
+            The framework has a rich ecosystem around it consisting of various
+            generic &lt;a href="#test-libraries"&gt;test libraries&lt;/a&gt;
+            and &lt;a href="#tools"&gt;tools&lt;/a&gt; that are developed
+            as separate projects.
+          &lt;/p&gt;
+          &lt;p&gt;
+            Robot Framework is operating system and application independent.
+            The core framework is implemented using
+            &lt;a target="_blank" href="http://python.org"&gt;Python&lt;/a&gt; and
+            runs also on
+            &lt;a target="_blank" href="http://jython.org"&gt;Jython&lt;/a&gt; (JVM) and
+            &lt;a target="_blank" href="http://ironpython.net"&gt;IronPython&lt;/a&gt; (.NET).
+          &lt;/p&gt;
+          &lt;div class="introduction-buttons cf"&gt;
+            &lt;a href="#test-libraries"&gt;&lt;div class="button orange"&gt;GET LIBRARIES&lt;hr /&gt;&lt;/div&gt;&lt;/a&gt;
+            &lt;a href="#documentation"&gt;&lt;div class="button green"&gt;READ DOCS&lt;hr /&gt;&lt;/div&gt;&lt;/a&gt;
+            &lt;a href="#tools"&gt;&lt;div class="button blue"&gt;USE TOOLS&lt;hr /&gt;&lt;/div&gt;&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;p&gt;
+            Robot Framework itself is open source software released
+            under &lt;a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0.html"&gt;Apache
+            License 2.0&lt;/a&gt;, and most of the libraries and tools in the
+            ecosystem are also open source. The framework was initially
+            developed at &lt;a target="_blank" href="http://networks.nokia.com"&gt;Nokia
+            Networks&lt;/a&gt; and it is nowadays sponsored by
+            &lt;a target="_blank" href="http://robotframework.org/foundation"&gt;Robot Framework
+            Foundation&lt;/a&gt;.
+          &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div id="news" class="column one-thirds"&gt;
+          &lt;a data-widget-id="321945669290033155" href="https://twitter.com/robotframework" data-dnt="true" class="twitter-timeline" height="712"&gt;Tweets by @robotframework&lt;/a&gt;
+          &lt;script&gt;!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");&lt;/script&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div id="architecture" class="row red"&gt;
+      &lt;div class="content-area"&gt;
+        &lt;div class="column one-thirds"&gt;
+          &lt;div class="column-content"&gt;
+            &lt;h2&gt;Clear.&lt;/h2&gt;
+            &lt;hr class="green" /&gt;
+            &lt;p&gt;
+              Robot Framework has a modular architecture that can be extended
+              with bundled and self-made &lt;a href="#test-libraries"&gt;test
+              libraries&lt;/a&gt;.
+            &lt;/p&gt;
+            &lt;p&gt;
+              Test data is defined in files using the syntax shown in the
+              &lt;a href="#examples"&gt;examples&lt;/a&gt; below. A file containing test cases creates a test
+              suite and placing these files into directories creates a
+              nested structure of test suites.
+            &lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column one-thirds"&gt;
+          &lt;div class="column-content"&gt;
+            &lt;h2&gt;Easy.&lt;/h2&gt;
+            &lt;hr class="orange" /&gt;
+            &lt;p&gt;
+              When test execution is started, the framework first parses the
+              test data. It then utilizes keywords provided by the test
+              libraries to interact with the system under test. Libraries
+              can communicate with the system either directly or using other
+              test tools as drivers.
+            &lt;/p&gt;
+            &lt;p&gt;
+              Test execution is started from the command line. As a result
+              you get report and log in HTML format as well as an XML
+              output. These provide extensive look into what your system does.
+            &lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column one-thirds"&gt;
+          &lt;div class="column-content"&gt;
+            &lt;h2&gt;Modular.&lt;/h2&gt;
+            &lt;hr class="blue" /&gt;
+            &lt;img data-target="#architecture-image-modal" data-toggle="modal" src="img/architecture.png" title="Robot Framework architecture" alt="Robot Framework architecture" /&gt;
+
+            &lt;span class="caption pull-right"&gt;Click for bigger version!&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+
+      &lt;div id="architecture-image-modal" class="modal hide fade"&gt;
+        &lt;div class="modal-header"&gt;
+          &lt;button aria-hidden="true" data-dismiss="modal" class="close" type="button"&gt;×&lt;/button&gt;
+           
+        &lt;/div&gt;
+        &lt;div class="modal-body"&gt;
+          &lt;img title="Robot Framework architecture" alt="Robot Framework architecture" src="img/architecture-big.png" /&gt;
+        &lt;/div&gt;
+        &lt;div class="modal-footer"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+
+
+    &lt;div id="examples" class="row dark"&gt;
+      &lt;div class="content-area"&gt;
+        &lt;h1 class="row-header"&gt;EXAMPLES&lt;/h1&gt;
+        &lt;div class="carousel slide" id="example-carousel"&gt;
+            &lt;div class="carousel-inner"&gt;
+
+              &lt;div class="item active cf"&gt;
+                &lt;div class="column half vertical-align"&gt;
+
+                  &lt;div class="vertical-content"&gt;
+                    &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gh"&gt;*** Settings ***&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="kn"&gt;Documentation&lt;/span&gt;&lt;span class="p"&gt;     &lt;/span&gt;&lt;span class="s"&gt;A test suite with a single test for valid login.&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="p"&gt;...               &lt;/span&gt;&lt;span class="s"&gt;This test has a workflow that is created using keywords in&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;...               &lt;/span&gt;&lt;span class="s"&gt;the imported resource file.&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="kn"&gt;Resource&lt;/span&gt;&lt;span class="p"&gt;          &lt;/span&gt;&lt;span class="nn"&gt;resource.txt&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+
+&lt;span class="gh"&gt;*** Test Cases ***&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="gu"&gt;Valid Login&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Open Browser To Login Page&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Input Username&lt;/span&gt;&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="s"&gt;demo&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Input Password&lt;/span&gt;&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="s"&gt;mode&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Submit Credentials&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Welcome Page Should Be Open&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    [&lt;/span&gt;&lt;span class="kn"&gt;Teardown&lt;/span&gt;&lt;span class="p"&gt;]    &lt;/span&gt;&lt;span class="nf"&gt;Close Browser&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+                    &lt;/pre&gt;&lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="column half vertical-align"&gt;
+                  &lt;div class="caption vertical-content"&gt;
+                    &lt;p&gt;
+                      Let's start with a real-life example from our &lt;a target="_blank" href="https://bitbucket.org/robotframework/webdemo"&gt;web demo project&lt;/a&gt;. Here we have a test suite with one test case which tests that login is valid. As you can see, test data syntax is based on &lt;span class="italic"&gt;keywords&lt;/span&gt;.
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                      Keywords are composable, meaning you can define new keywords that use pre-existing keywords. This way, you can abstract details of testing to something that makes immediate sense; for example, we don't need to know what exactly the step &lt;span class="teletype"&gt;Submit Credentials&lt;/span&gt; actually does, unless we want to. Test cases are therefore clear and readable, with just the right level of abstraction to convey the &lt;span class="italic"&gt;intent&lt;/span&gt; of the test, rather than the nuts and bolts.
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                      See next example for what you're going to get once this example is run!
+                    &lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;div class="item cf"&gt;
+                &lt;div class="column half vertical-align"&gt;
+                  &lt;div class="vertical-content margin"&gt;
+                    &lt;p&gt;
+                    Executing the test suite file from previous example, we get the meat and bone of Robot Framework: A comprehensive debriefing on what happened in the test execution in two parts: the &lt;span class="bold"&gt; Report&lt;/span&gt; and the &lt;span class="bold"&gt;Log&lt;/span&gt;.
+                    &lt;/p&gt;
+                    &lt;p&gt;This Report and Log are based on executing the test suite described in the previous example and is from our &lt;a target="_blank" href="https://bitbucket.org/robotframework/webdemo"&gt;web demo project&lt;/a&gt;.&lt;/p&gt;
+
+                    &lt;img id="report" src="img/examples/report.png" /&gt;
+
+                    &lt;p id="example-report-last-paragraph"&gt;
+                      Report details clearly viewable statistics including Pass/Fail ratios and elapsed times. This gives you great overview on the test execution.
+                    &lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="column half vertical-align"&gt;
+                  &lt;div class="vertical-content margin"&gt;
+                    &lt;img id="log" src="img/examples/log.png" /&gt;
+                    &lt;p class="justify"&gt;
+                      Log details statistics from each step of the test execution, from keyword to keyword. It enables you to drill down on the specifics of the test in case of failure or otherwise.
+                    &lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;div class="item cf"&gt;
+                &lt;div class="column half vertical-align"&gt;
+                  &lt;div class="caption margin vertical-content"&gt;
+
+                    &lt;p&gt;
+                      Keywords can be defined outside of the test suite and be imported as an external resources. This means you can collect generally useful keywords to one place and share them throughout your project, keeping also the testing &lt;a target="_blank" class="bold" href="http://en.wikipedia.org/wiki/Don%27t_repeat_yourself"&gt;DRY&lt;/a&gt;!
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                      Below, we have test case testing invalid login in  &lt;a href="https://bitbucket.org/robotframework/webdemo"&gt;our very own web demo&lt;/a&gt;. As you can see, we can abstract away a lot of necessary, but ultimately non-expressive nuts and bolts of the testing to the &lt;span class="italic"&gt;resource file&lt;/span&gt;.
+                    &lt;/p&gt;
+
+                    &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gh"&gt;*** Settings ***&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="kn"&gt;Suite Setup&lt;/span&gt;&lt;span class="p"&gt;       &lt;/span&gt;&lt;span class="nf"&gt;Open Browser To Login Page&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="kn"&gt;Suite Teardown&lt;/span&gt;&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Close Browser&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="kn"&gt;Test Setup&lt;/span&gt;&lt;span class="p"&gt;        &lt;/span&gt;&lt;span class="nf"&gt;Go To Login Page&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="kn"&gt;Test Template&lt;/span&gt;&lt;span class="p"&gt;     &lt;/span&gt;&lt;span class="nf"&gt;Login With Invalid Credentials Should Fail&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="kn"&gt;Resource&lt;/span&gt;&lt;span class="p"&gt;          &lt;/span&gt;&lt;span class="nn"&gt;resource.txt&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+
+&lt;span class="gh"&gt;*** Test Cases ***&lt;/span&gt;&lt;span class="p"&gt;               &lt;/span&gt;&lt;span class="gh"&gt;User Name&lt;/span&gt;&lt;span class="p"&gt;        &lt;/span&gt;&lt;span class="gh"&gt;Password&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="gu"&gt;Invalid Username&lt;/span&gt;&lt;span class="p"&gt;                 &lt;/span&gt;&lt;span class="s"&gt;invalid&lt;/span&gt;&lt;span class="p"&gt;          ${&lt;/span&gt;&lt;span class="nv"&gt;VALID PASSWORD&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="gu"&gt;Invalid Password&lt;/span&gt;&lt;span class="p"&gt;                 ${&lt;/span&gt;&lt;span class="nv"&gt;VALID USER&lt;/span&gt;&lt;span class="p"&gt;}    &lt;/span&gt;&lt;span class="s"&gt;invalid&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="gu"&gt;Invalid Username And Password&lt;/span&gt;&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="s"&gt;invalid&lt;/span&gt;&lt;span class="p"&gt;          &lt;/span&gt;&lt;span class="s"&gt;whatever&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="gu"&gt;Empty Username&lt;/span&gt;&lt;span class="p"&gt;                   ${&lt;/span&gt;&lt;span class="nv"&gt;EMPTY&lt;/span&gt;&lt;span class="p"&gt;}         ${&lt;/span&gt;&lt;span class="nv"&gt;VALID PASSWORD&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="gu"&gt;Empty Password&lt;/span&gt;&lt;span class="p"&gt;                   ${&lt;/span&gt;&lt;span class="nv"&gt;VALID USER&lt;/span&gt;&lt;span class="p"&gt;}    ${&lt;/span&gt;&lt;span class="nv"&gt;EMPTY&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="gu"&gt;Empty Username And Password&lt;/span&gt;&lt;span class="p"&gt;      ${&lt;/span&gt;&lt;span class="nv"&gt;EMPTY&lt;/span&gt;&lt;span class="p"&gt;}         ${&lt;/span&gt;&lt;span class="nv"&gt;EMPTY&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="gh"&gt;*** Keywords ***&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="gu"&gt;Login With Invalid Credentials Should Fail&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    [&lt;/span&gt;&lt;span class="kn"&gt;Arguments&lt;/span&gt;&lt;span class="p"&gt;]    ${&lt;/span&gt;&lt;span class="nv"&gt;username&lt;/span&gt;&lt;span class="p"&gt;}    ${&lt;/span&gt;&lt;span class="nv"&gt;password&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Input Username&lt;/span&gt;&lt;span class="p"&gt;    ${&lt;/span&gt;&lt;span class="nv"&gt;username&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Input Password&lt;/span&gt;&lt;span class="p"&gt;    ${&lt;/span&gt;&lt;span class="nv"&gt;password&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Submit Credentials&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Login Should Have Failed&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+
+&lt;span class="gu"&gt;Login Should Have Failed&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Location Should Be&lt;/span&gt;&lt;span class="p"&gt;    ${&lt;/span&gt;&lt;span class="nv"&gt;ERROR URL&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Title Should Be&lt;/span&gt;&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="s"&gt;Error Page&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+                    &lt;/pre&gt;&lt;/div&gt;
+
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="column half"&gt;
+
+                  &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gh"&gt;*** Settings ***&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="kn"&gt;Library&lt;/span&gt;&lt;span class="p"&gt;           &lt;/span&gt;&lt;span class="nn"&gt;Selenium2Library&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+
+&lt;span class="gh"&gt;*** Variables ***&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;SERVER&lt;/span&gt;&lt;span class="p"&gt;}         &lt;/span&gt;&lt;span class="s"&gt;localhost:7272&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;BROWSER&lt;/span&gt;&lt;span class="p"&gt;}        &lt;/span&gt;&lt;span class="s"&gt;Firefox&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;DELAY&lt;/span&gt;&lt;span class="p"&gt;}          &lt;/span&gt;&lt;span class="s"&gt;0&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;VALID USER&lt;/span&gt;&lt;span class="p"&gt;}     &lt;/span&gt;&lt;span class="s"&gt;demo&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;VALID PASSWORD&lt;/span&gt;&lt;span class="p"&gt;}    &lt;/span&gt;&lt;span class="s"&gt;mode&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;LOGIN URL&lt;/span&gt;&lt;span class="p"&gt;}      &lt;/span&gt;&lt;span class="s"&gt;http://&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;SERVER&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s"&gt;/&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;WELCOME URL&lt;/span&gt;&lt;span class="p"&gt;}    &lt;/span&gt;&lt;span class="s"&gt;http://&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;SERVER&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s"&gt;/welcome.html&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;ERROR URL&lt;/span&gt;&lt;span class="p"&gt;}      &lt;/span&gt;&lt;span class="s"&gt;http://&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;SERVER&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s"&gt;/error.html&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+
+&lt;span class="gh"&gt;*** Keywords ***&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="gu"&gt;Open Browser To Login Page&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Open Browser&lt;/span&gt;&lt;span class="p"&gt;    ${&lt;/span&gt;&lt;span class="nv"&gt;LOGIN URL&lt;/span&gt;&lt;span class="p"&gt;}    ${&lt;/span&gt;&lt;span class="nv"&gt;BROWSER&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Maximize Browser Window&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Set Selenium Speed&lt;/span&gt;&lt;span class="p"&gt;    ${&lt;/span&gt;&lt;span class="nv"&gt;DELAY&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Login Page Should Be Open&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+
+&lt;span class="gu"&gt;Login Page Should Be Open&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Title Should Be&lt;/span&gt;&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="s"&gt;Login Page&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+
+&lt;span class="gu"&gt;Go To Login Page&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Go To&lt;/span&gt;&lt;span class="p"&gt;    ${&lt;/span&gt;&lt;span class="nv"&gt;LOGIN URL&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Login Page Should Be Open&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+
+&lt;span class="gu"&gt;Input Username&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    [&lt;/span&gt;&lt;span class="kn"&gt;Arguments&lt;/span&gt;&lt;span class="p"&gt;]    ${&lt;/span&gt;&lt;span class="nv"&gt;username&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Input Text&lt;/span&gt;&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="s"&gt;username_field&lt;/span&gt;&lt;span class="p"&gt;    ${&lt;/span&gt;&lt;span class="nv"&gt;username&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="gu"&gt;Input Password&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    [&lt;/span&gt;&lt;span class="kn"&gt;Arguments&lt;/span&gt;&lt;span class="p"&gt;]    ${&lt;/span&gt;&lt;span class="nv"&gt;password&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Input Text&lt;/span&gt;&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="s"&gt;password_field&lt;/span&gt;&lt;span class="p"&gt;    ${&lt;/span&gt;&lt;span class="nv"&gt;password&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="gu"&gt;Submit Credentials&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Click Button&lt;/span&gt;&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="s"&gt;login_button&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+
+&lt;span class="gu"&gt;Welcome Page Should Be Open&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Location Should Be&lt;/span&gt;&lt;span class="p"&gt;    ${&lt;/span&gt;&lt;span class="nv"&gt;WELCOME URL&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Title Should Be&lt;/span&gt;&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="s"&gt;Welcome Page&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+                  &lt;/pre&gt;&lt;/div&gt;
+
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;div class="item cf"&gt;
+                &lt;div class="column half vertical-align"&gt;
+                  &lt;div class="vertical-content"&gt;
+                    &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;calculator&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Calculator&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;CalculationError&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;CalculatorLibrary&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;object&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_calc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Calculator&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;''&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;push_button&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;button&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_calc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;push&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;button&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;push_buttons&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;buttons&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;button&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;buttons&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;' '&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;''&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;push_button&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;button&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;result_should_be&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;expected&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_result&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;expected&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="ne"&gt;AssertionError&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt; != &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;'&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_result&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;expected&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;should_fail&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;expression&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;push_buttons&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;expression&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="n"&gt;CalculationError&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;err&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;err&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="ne"&gt;AssertionError&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"'&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;' should have failed"&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;expression&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                    &lt;/pre&gt;&lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="column half vertical-align"&gt;
+                  &lt;div class="caption vertical-content"&gt;
+                    &lt;p&gt;
+                      All keywords in Robot Framework come from some library. What if existing libraries do not have what you need? Easy! Just make a library of your own!
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                      This example is from our &lt;a target="_blank" href="https://bitbucket.org/robotframework/robotdemo"&gt;Robot Demo&lt;/a&gt;. These keywords the tests use are implemented in plain Python. You can also do libraries in Java.
+                    &lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+
+              &lt;div class="item cf"&gt;
+                &lt;div class="column half vertical-align"&gt;
+                  &lt;div class="vertical-content"&gt;
+                    &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gh"&gt;*** Settings ***&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="kn"&gt;Test Template&lt;/span&gt;&lt;span class="p"&gt;     &lt;/span&gt;&lt;span class="nf"&gt;Calculate&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="kn"&gt;Library&lt;/span&gt;&lt;span class="p"&gt;           &lt;/span&gt;&lt;span class="nn"&gt;CalculatorLibrary&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+
+&lt;span class="gh"&gt;*** Test Cases ***&lt;/span&gt;&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="gh"&gt;Expression&lt;/span&gt;&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="gh"&gt;Expected&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="gu"&gt;Additions&lt;/span&gt;&lt;span class="p"&gt;             &lt;/span&gt;&lt;span class="s"&gt;12 + 2 + 2&lt;/span&gt;&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="s"&gt;16&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;                      &lt;/span&gt;&lt;span class="s"&gt;2 + -3&lt;/span&gt;&lt;span class="p"&gt;        &lt;/span&gt;&lt;span class="s"&gt;-1&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+
+&lt;span class="gu"&gt;Substractions&lt;/span&gt;&lt;span class="p"&gt;         &lt;/span&gt;&lt;span class="s"&gt;12 - 2 - 2&lt;/span&gt;&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="s"&gt;8&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;                      &lt;/span&gt;&lt;span class="s"&gt;2 - -3&lt;/span&gt;&lt;span class="p"&gt;        &lt;/span&gt;&lt;span class="s"&gt;5&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+
+&lt;span class="gu"&gt;Multiplication&lt;/span&gt;&lt;span class="p"&gt;        &lt;/span&gt;&lt;span class="s"&gt;12 * 2 * 2&lt;/span&gt;&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="s"&gt;48&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;                      &lt;/span&gt;&lt;span class="s"&gt;2 * -3&lt;/span&gt;&lt;span class="p"&gt;        &lt;/span&gt;&lt;span class="s"&gt;-6&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+
+&lt;span class="gu"&gt;Division&lt;/span&gt;&lt;span class="p"&gt;              &lt;/span&gt;&lt;span class="s"&gt;12 / 2 / 2&lt;/span&gt;&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="s"&gt;3&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;                      &lt;/span&gt;&lt;span class="s"&gt;2 / -3&lt;/span&gt;&lt;span class="p"&gt;        &lt;/span&gt;&lt;span class="s"&gt;-1&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+
+&lt;span class="gu"&gt;Calculation error&lt;/span&gt;&lt;span class="p"&gt;     [&lt;/span&gt;&lt;span class="kn"&gt;Template&lt;/span&gt;&lt;span class="p"&gt;]    &lt;/span&gt;&lt;span class="nf"&gt;Calculation should fail&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;                      &lt;/span&gt;&lt;span class="s"&gt;kekkonen&lt;/span&gt;&lt;span class="p"&gt;      &lt;/span&gt;&lt;span class="s"&gt;Invalid button 'k'.&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;                      ${&lt;/span&gt;&lt;span class="nv"&gt;EMPTY&lt;/span&gt;&lt;span class="p"&gt;}      &lt;/span&gt;&lt;span class="s"&gt;Invalid expression.&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;                      &lt;/span&gt;&lt;span class="s"&gt;1 / 0&lt;/span&gt;&lt;span class="p"&gt;         &lt;/span&gt;&lt;span class="s"&gt;Division by zero.&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+
+&lt;span class="gh"&gt;*** Keywords ***&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="gu"&gt;Calculate&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    [&lt;/span&gt;&lt;span class="kn"&gt;Arguments&lt;/span&gt;&lt;span class="p"&gt;]    ${&lt;/span&gt;&lt;span class="nv"&gt;expression&lt;/span&gt;&lt;span class="p"&gt;}    ${&lt;/span&gt;&lt;span class="nv"&gt;expected&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Push buttons&lt;/span&gt;&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="s"&gt;C&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;expression&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s"&gt;=&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Result should be&lt;/span&gt;&lt;span class="p"&gt;    ${&lt;/span&gt;&lt;span class="nv"&gt;expected&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="gu"&gt;Calculation should fail&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    [&lt;/span&gt;&lt;span class="kn"&gt;Arguments&lt;/span&gt;&lt;span class="p"&gt;]    ${&lt;/span&gt;&lt;span class="nv"&gt;expression&lt;/span&gt;&lt;span class="p"&gt;}    ${&lt;/span&gt;&lt;span class="nv"&gt;expected&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;    ${&lt;/span&gt;&lt;span class="nv"&gt;error&lt;/span&gt;&lt;span class="p"&gt;} =    &lt;/span&gt;&lt;span class="nf"&gt;Should fail&lt;/span&gt;&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="s"&gt;C&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;expression&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="s"&gt;=&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Should be equal&lt;/span&gt;&lt;span class="p"&gt;    ${&lt;/span&gt;&lt;span class="nv"&gt;expected&lt;/span&gt;&lt;span class="p"&gt;}    ${&lt;/span&gt;&lt;span class="nv"&gt;error&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+                    &lt;/pre&gt;&lt;/div&gt;
+                  &lt;/div&gt;
+
+                &lt;/div&gt;
+                &lt;div class="column half vertical-align"&gt;
+                  &lt;div class="caption vertical-content"&gt;
+                    &lt;p&gt;
+                      &lt;span class="bold"&gt;&lt;a target="_blank" href="http://en.wikipedia.org/wiki/Data-driven_testing"&gt;Data-driven test development&lt;/a&gt;&lt;/span&gt; is easy due to you being able to define templates for your tests.
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                      In this example, each test case adheres to the template set by &lt;span class="teletype"&gt;Calculate&lt;/span&gt; keyword.
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                      This example comes from &lt;a target="_blank" href="https://bitbucket.org/robotframework/robotdemo"&gt;our another demo&lt;/a&gt; displaying testing a simple calculator. Check it out!
+                    &lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;div class="item cf"&gt;
+                &lt;div class="column half vertical-align"&gt;
+                  &lt;div class="vertical-content"&gt;
+                    &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gh"&gt;*** Settings ***&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="kn"&gt;Library&lt;/span&gt;&lt;span class="p"&gt;           &lt;/span&gt;&lt;span class="nn"&gt;CalculatorLibrary&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+
+&lt;span class="gh"&gt;*** Test Cases ***&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="gu"&gt;Addition&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="ge"&gt;Given &lt;/span&gt;&lt;span class="nf"&gt;calculator has been cleared&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="ge"&gt;When &lt;/span&gt;&lt;span class="nf"&gt;user types "1 + 1"&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="ge"&gt;and &lt;/span&gt;&lt;span class="nf"&gt;user pushes equals&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="ge"&gt;Then &lt;/span&gt;&lt;span class="nf"&gt;result is "2"&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+
+&lt;span class="gh"&gt;*** Keywords ***&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="gu"&gt;Calculator has been cleared&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Push button&lt;/span&gt;&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="s"&gt;C&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+
+&lt;span class="gu"&gt;User types "&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;expression&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="gu"&gt;"&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Push buttons&lt;/span&gt;&lt;span class="p"&gt;    ${&lt;/span&gt;&lt;span class="nv"&gt;expression&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="gu"&gt;User pushes equals&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Push button&lt;/span&gt;&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="s"&gt;=&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+
+&lt;span class="gu"&gt;Result is "&lt;/span&gt;&lt;span class="p"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;result&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="gu"&gt;"&lt;/span&gt;&lt;span class="p"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;    &lt;/span&gt;&lt;span class="nf"&gt;Result should be&lt;/span&gt;&lt;span class="p"&gt;    ${&lt;/span&gt;&lt;span class="nv"&gt;result&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+                    &lt;/pre&gt;&lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="column half vertical-align"&gt;
+                  &lt;div class="caption vertical-content"&gt;
+                    &lt;p&gt;
+                      Want to do &lt;a href="https://github.com/cucumber/cucumber/wiki/Gherkin" target="_blank"&gt;Gherkin-style&lt;/a&gt; behaviour-driven test development made famous by &lt;a target="_blank" href="http://cukes.info/"&gt;Cucumber&lt;/a&gt;? No problem! That's baked in!
+                    &lt;/p&gt;&lt;p&gt;
+                    &lt;/p&gt;&lt;p&gt;
+                      Here is another example from our &lt;a target="_blank" href="https://bitbucket.org/robotframework/robotdemo"&gt;Robot Demo&lt;/a&gt; that shows how you can level the expressiveness of Given-When-Then in Robot Framework.
+                    &lt;/p&gt;
+
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+            &lt;/div&gt;
+            &lt;div id="carousel-balls" style="width: 138px;"&gt;&lt;div class="carousel-ball active" data-original-title="" title=""&gt;&lt;/div&gt;&lt;div class="carousel-ball" data-original-title="" title=""&gt;&lt;/div&gt;&lt;div class="carousel-ball" data-original-title="" title=""&gt;&lt;/div&gt;&lt;div class="carousel-ball" data-original-title="" title=""&gt;&lt;/div&gt;&lt;div class="carousel-ball" data-original-title="" title=""&gt;&lt;/div&gt;&lt;div class="carousel-ball" data-original-title="" title=""&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;a data-slide="prev" href="#example-carousel" class="carousel-control left"&gt;&lt;/a&gt;
+            &lt;a data-slide="next" href="#example-carousel" class="carousel-control right"&gt;&lt;/a&gt;
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div id="test-libraries" class="row"&gt;
+
+      &lt;div class="content-area"&gt;
+        &lt;h1 class="row-header"&gt;THE LIBRARIES&lt;/h1&gt;
+        &lt;p&gt;
+          Test libraries provide the actual testing capabilities to
+          Robot Framework by providing keywords. There are several standard libraries that are
+          bundled in with the framework, and galore of separately
+          developed external libraries that can be installed based on your
+          needs. Creating your own test libraries &lt;a target="_blank" href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#creating-test-libraries"&gt;is a breeze&lt;/a&gt;.
+        &lt;/p&gt;
+        &lt;p&gt;
+          &lt;a target="_blank" href="https://github.com/robotframework/robotframework.github.com"&gt;Let us know&lt;/a&gt; if
+          there are useful libraries missing from the list.
+        &lt;/p&gt;
+        &lt;div class="links"&gt;
+          &lt;a class="active" href="#libraries-standard"&gt;STANDARD&lt;/a&gt;
+          &lt;a href="#libraries-external"&gt;EXTERNAL&lt;/a&gt;
+          &lt;a href="#libraries-other"&gt;OTHER&lt;/a&gt;
+          &lt;div class="marker" style="left: 370px;"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="external-links active" id="libraries-standard"&gt;
+          &lt;div class="column one-thirds"&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://robotframework.org/robotframework/#standard-libraries"&gt;Builtin&lt;/a&gt;
+              Provides a set of often needed generic keywords. Always automatically available without imports.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://robotframework.org/robotframework/#standard-libraries"&gt;Dialogs&lt;/a&gt;
+              Provides means for pausing the test execution and getting input from users.
+            &lt;/div&gt;
+
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://robotframework.org/robotframework/#standard-libraries"&gt;Collections&lt;/a&gt;
+              Provides a set of keywords for handling Python lists and dictionaries.
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+
+          &lt;div class="column one-thirds"&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://robotframework.org/robotframework/#standard-libraries"&gt;OperatingSystem&lt;/a&gt;
+              Enables various operating system related tasks to be performed in the system where Robot Framework is running.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/robotframework/RemoteInterface"&gt;Remote&lt;/a&gt;
+              Special library acting as a proxy between Robot Framework and test libraries elsewhere. Actual test libraries can be running on different machines and be implemented using any programming language supporting XML-RPC protocol.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://robotframework.org/robotframework/#standard-libraries"&gt;Screenshot&lt;/a&gt;
+              Provides keywords to capture screenshots of the desktop.
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+
+          &lt;div class="column one-thirds"&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://robotframework.org/robotframework/#standard-libraries"&gt;String&lt;/a&gt;
+              Library for generating, modifying and verifying strings.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://robotframework.org/robotframework/#standard-libraries"&gt;Telnet&lt;/a&gt;
+              Makes it possible to connect to Telnet servers and execute commands on the opened connections.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://robotframework.org/robotframework/#standard-libraries"&gt;XML&lt;/a&gt;
+              Library for generating, modifying and verifying XML files.
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class="column half"&gt;
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://robotframework.org/robotframework/#standard-libraries"&gt;Process&lt;/a&gt;
+              Library for running processes in the system. New in Robot Framework 2.8.
+           &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="column half"&gt;
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://robotframework.org/robotframework/#standard-libraries"&gt;DateTime&lt;/a&gt;
+              Library for date and time conversions. New in Robot Framework 2.8.5.
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class="external-links" id="libraries-external"&gt;
+
+          &lt;div class="column one-thirds"&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/lovelysystems/robotframework-androidlibrary#readme"&gt;Android library&lt;/a&gt;
+              Library for all your Android automation needs. It uses Calabash Android internally.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/luisxiaomai/robotframework-anywherelibrary"&gt;AnywhereLibrary&lt;/a&gt;
+              Library for testing Single-Page Apps (SPA). Uses Selenium Webdriver and Appium internally.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/jollychang/robotframework-appiumlibrary"&gt;AppiumLibrary&lt;/a&gt;
+              Library for Android- and iOS-testing. It uses Appium internally.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/bulkan/robotframework-archivelibrary"&gt;Archive library&lt;/a&gt;
+              Library for handling zip- and tar-archives.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://code.google.com/p/robotframework-autoitlibrary/"&gt;AutoItLibrary&lt;/a&gt;
+              Windows GUI testing library that uses AutoIt freeware tool as a driver.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/Hi-Fi/robotframework-dblibrary"&gt;Database Library (Java)&lt;/a&gt;
+              Java-based library for database testing. Usable with Jython. Available also at &lt;a target="_blank" href="http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22robotframework-dblibrary%22"&gt;Maven central&lt;/a&gt;.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://franz-see.github.com/Robotframework-Database-Library/"&gt;Database Library (Python)&lt;/a&gt;
+              Python based library for database testing. Works with any Python interpreter, including Jython.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/bulkan/robotframework-difflibrary"&gt;Diff Library&lt;/a&gt;
+              Library to diff two files together.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://pypi.python.org/pypi/robotframework-djangolibrary"&gt;Django Library&lt;/a&gt;
+              Library for &lt;a target="_blank" href="https://www.djangoproject.com/"&gt;Django&lt;/a&gt;, a Python web framework.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/lcarbonn/robotframework-eclipselibrary/"&gt;Eclipse Library&lt;/a&gt;
+              Library for testing Eclipse RCP applications using SWT widgets.
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+          &lt;div class="column one-thirds"&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://pypi.python.org/pypi/robotframework-faker/"&gt;robotframework-faker&lt;/a&gt;
+              Library for &lt;a target="_blank" href="https://github.com/joke2k/faker"&gt;Faker&lt;/a&gt;, a fake test data generator.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://sourceforge.net/projects/rf-ftp-py/"&gt;FTP library&lt;/a&gt;
+              Library for testing and using FTP server with Robot Framework.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/peritus/robotframework-httplibrary/#readme"&gt;HTTP library (livetest)&lt;/a&gt;
+              Library for HTTP level testing using livetest tool internally.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/bulkan/robotframework-requests/#readme"&gt;HTTP library (Requests)&lt;/a&gt;
+              Library for HTTP level testing using Request internally.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/lovelysystems/robotframework-ioslibrary#readme"&gt;iOS library&lt;/a&gt;
+              Library for all your iOS automation needs. It uses Calabash iOS Server internally.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/eficode/robotframework-imagehorizonlibrary#readme"&gt;ImageHorizonLibrary&lt;/a&gt;
+              Cross-platform, pure Python library for GUI automation based on image recognition.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/iPlantCollaborativeOpenSource/Robotframework-MongoDB-Library#readme"&gt;MongoDB library&lt;/a&gt;
+              Library for interacting with MongoDB using pymongo.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/randomsync/robotframework-mqttlibrary#readme"&gt;MQTT library&lt;/a&gt;
+              Library for testing MQTT brokers and applications.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/robotframework/Rammbock#readme"&gt;Rammbock&lt;/a&gt;
+              Generic network protocol test library that offers easy way to specify network packets and inspect the results of sent and received packets.
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+          &lt;div class="column one-thirds"&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/robotframework/remoteswinglibrary"&gt;RemoteSwingLibrary&lt;/a&gt;
+              Library for testing and connecting to a java process and using SwingLibrary, especially Java Web Start applications.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://github.com/robotframework/SeleniumLibrary/"&gt;SeleniumLibrary&lt;/a&gt;
+              Web testing library that uses popular Selenium tool internally. Uses deprecated Selenium 1.0 and is also itself deprecated.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/robotframework/Selenium2Library"&gt;Selenium2Library&lt;/a&gt;
+              Web testing library that uses Selenium 2. For most parts drop-in-replacement for old SeleniumLibrary.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/MarkusBernhardt/robotframework-selenium2library-java#readme"&gt;Selenium2Library for Java&lt;/a&gt;
+              Java port of the Selenium2Library.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/rickypc/robotframework-extendedselenium2library"&gt;ExtendedSelenium2Library&lt;/a&gt;
+              Web testing library that uses Selenium2Library internally, providing AngularJS support on top of it.
+            &lt;/div&gt;
+
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/robotframework/SSHLibrary"&gt;SSHLibrary&lt;/a&gt;
+              Enables executing commands on remote machines over an SSH connection. Also supports transfering files using SFTP.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/ombre42/robotframework-sudslibrary#readme"&gt;SudsLibrary&lt;/a&gt;
+              A library for functional testing of SOAP-based web services based on Suds, a dynamic SOAP 1.1 client.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/robotframework/SwingLibrary/wiki"&gt;SwingLibrary&lt;/a&gt;
+              Library for testing Java applications with Swing GUI.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/semperos/watir-robot/#readme"&gt;watir-robot&lt;/a&gt;
+              Web testing library that uses Watir tool.
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;div class="external-links" id="libraries-other"&gt;
+
+          &lt;div class="column half"&gt;
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#creating-test-libraries"&gt;Creating test libraries&lt;/a&gt;
+              Creating test libraries section in Robot Framework User Guide.
+            &lt;/div&gt;
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://pypi.python.org/pypi/plone.app.robotframework"&gt;plone.app.robotframework&lt;/a&gt;
+              Provides resources and tools for writing functional Selenium tests for Plone CMS and its add-ons.
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class="column half"&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/robotframework/JavalibCore/wiki"&gt;JavalibCore&lt;/a&gt;
+              Base for implementing larger Java based test libraries for Robot Framework.
+            &lt;/div&gt;
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/robotframework/RemoteInterface"&gt;Remote&lt;/a&gt;
+              Built-in special library acting as a proxy between Robot Framework and test libraries elsewhere. Actual test libraries can be running on different machines and be implemented using any programming language supporting XML-RPC protocol.
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+          &lt;div class="column full"&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/robotframework/RemoteApplications"&gt;RemoteApplications&lt;/a&gt;
+              Special test library for launching Java applications on a separate JVM and taking other libraries into use on them.
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div id="tools" class="row blue"&gt;
+      &lt;div class="content-area"&gt;
+        &lt;h1 class="row-header"&gt;THE TOOLS&lt;/h1&gt;
+        &lt;p&gt;
+          Supporting tools ease everything surrounding tests: editing, running, building and so
+          on. Most of these tools are developed as separate projects,
+          but some are built into the framework itself.
+        &lt;/p&gt;
+        &lt;p&gt;
+          &lt;a target="_blank" href="https://github.com/robotframework/robotframework.github.com"&gt;Let us know&lt;/a&gt; if there are useful tools missing from the list.
+        &lt;/p&gt;
+
+        &lt;div class="links"&gt;
+          &lt;a class="active" href="#tools-builtin"&gt;BUILT-IN&lt;/a&gt;
+          &lt;a href="#tools-editors"&gt;EDITORS&lt;/a&gt;
+          &lt;a href="#tools-build"&gt;BUILD&lt;/a&gt;
+          &lt;a href="#tools-other"&gt;OTHER&lt;/a&gt;
+          &lt;div class="marker" style="left: 370px;"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div id="tools-builtin" class="external-links active"&gt;
+
+          &lt;div class="column half"&gt;
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://robotframework.org/robotframework/#built-in-tools"&gt;Rebot&lt;/a&gt;
+              Tool for generating logs and reports based on XML outputs and for combining multiple outputs together.
+            &lt;/div&gt;
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://robotframework.org/robotframework/#built-in-tools"&gt;Libdoc&lt;/a&gt;
+              Tool for generating keyword documentation for test libraries and resource files.
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class="column half"&gt;
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://robotframework.org/robotframework/#built-in-tools"&gt;Testdoc&lt;/a&gt;
+              Generates high level HTML documentation based on Robot Framework test cases.
+            &lt;/div&gt;
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://robotframework.org/robotframework/#built-in-tools"&gt;Tidy&lt;/a&gt;
+              Tool for cleaning up and changing format of Robot Framework test data files.
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;div id="tools-editors" class="external-links"&gt;
+          &lt;div class="column one-thirds"&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/robotframework/RIDE/wiki"&gt;RIDE&lt;/a&gt;
+              Standalone Robot Framework test data editor.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://atom.io/packages/language-robot-framework"&gt;Atom plugin&lt;/a&gt;
+              Robot Framework plugin for Atom.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/boakley/brackets-robotframework/wiki"&gt;Brackets plugin&lt;/a&gt;
+              Robot Framework plugin for Brackets.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/NitorCreations/RobotFramework-EclipseIDE/wiki"&gt;Eclipse plugin&lt;/a&gt;
+              Robot Framework plugin for Eclipse IDE.
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+
+          &lt;div class="column one-thirds"&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/sakari/robot-mode"&gt;Emacs major mode&lt;/a&gt;
+              Emacs major mode for editing tests.
+            &lt;/div&gt;
+
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/vkosuri/gedit-robot"&gt;Gedit&lt;/a&gt;
+              Syntax highlighting for Gedit.
+            &lt;/div&gt;
+
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://plugins.jetbrains.com/plugin/7430"&gt;Robot Plugin for IntelliJ IDEA&lt;/a&gt;
+              For IntelliJ IDEA-based editors by JIVE Software.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://plugins.jetbrains.com/plugin/7415"&gt;Robot Support for IntelliJ IDEA&lt;/a&gt;
+              For IntelliJ IDEA-based editors by Valerio Angelini.
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+
+          &lt;div class="column one-thirds"&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://bitbucket.org/jussimalinen/robot.tmbundle/"&gt;TextMate bundle&lt;/a&gt;
+              Bundle for TextMate adding syntax highlighting.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/andriyko/sublime-robot-framework-assistant"&gt;Sublime assistant&lt;/a&gt;
+               A plugin for Sublime Text 2 &amp;amp; 3 by Andriy Hrytskiv.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/shellderp/sublime-robot-plugin"&gt;Sublime plugin&lt;/a&gt;
+              A plugin for Sublime Text 2 by Mike Gershunovsky.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/mfukar/robotframework-vim"&gt;Vim plugin&lt;/a&gt;
+              Vim plugin for development with Robot Framework.
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+
+          &lt;div class="column half"&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/vkosuri/lang-robot"&gt;Notepad++&lt;/a&gt;
+              Syntax highlighting for Notepad++.
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+
+          &lt;div class="column half"&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/nokia/RED"&gt;RED&lt;/a&gt;
+              Eclipse based editor with a debugger by Nokia.
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+
+
+        &lt;/div&gt;
+
+        &lt;div id="tools-build" class="external-links"&gt;
+
+          &lt;div class="column one-thirds"&gt;
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://wiki.jenkins-ci.org/display/JENKINS/Robot+Framework+Plugin"&gt;Jenkins plugin&lt;/a&gt;
+              Plugin to collect and publish Robot Framework test results in Jenkins.
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class="column one-thirds"&gt;
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://robotframework.github.com/MavenPlugin/"&gt;Maven plugin&lt;/a&gt;
+              Maven plugin for using Robot Framework.
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class="column one-thirds"&gt;
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://code.google.com/p/robotframework-ant/"&gt;Ant task&lt;/a&gt;
+              Ant task for running Robot Framework tests.
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;div id="tools-other" class="external-links"&gt;
+          &lt;div class="column one-thirds"&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/robotframework/DbBot"&gt;DbBot&lt;/a&gt;
+              Tool for serializing Robot Framework test results, i.e. output.xml files, into a SQLite database. It serves a good starting point to create your own reporting and analyzing tools.
+            &lt;/div&gt;
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://bitbucket.org/robotframework/fixml"&gt;Fixml&lt;/a&gt;
+              Tool for fixing Robot Framework output files that are broken.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://github.com/robotframework/mabot/"&gt;Mabot&lt;/a&gt;
+              Tool for reporting manual tests in format compatible with Robot Framework outputs.
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+          &lt;div class="column one-thirds"&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/mkorpela/pabot"&gt;Pabot&lt;/a&gt;
+              A parallel executor for Robot Framework test cases.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://github.com/robotframework/rfdoc/"&gt;RFDoc&lt;/a&gt;
+              Web based system for storing and searching Robot Framework test library and resource file documentations.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/boakley/robotframework-hub/wiki"&gt;Robot Framework Hub&lt;/a&gt;
+              Lightweight web server that provides access to the Robot Framework test assets via browser.
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+          &lt;div class="column one-thirds"&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://bitbucket.org/robotframework/pygmentslexer"&gt;Robot Framework Lexer&lt;/a&gt;
+              Robot Framework syntax highlighting with Pygments. Link is to the lexer project itself, but the lexer is part of Pygments from version 1.6 onwards.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://bitbucket.org/robotframework/robottools"&gt;Robot Tools&lt;/a&gt;
+              Collection of supporting tools that can be used with Robot Framework.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/robotframework/statuschecker/"&gt;StatusChecker&lt;/a&gt;
+              A tool for validation that executed Robot Framework test cases have expected statuses and log messages. Mainly targeted for test library developers.
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;div id="documentation" class="row dark"&gt;
+      &lt;div class="content-area"&gt;
+        &lt;h1 class="row-header"&gt;THE DOCS&lt;/h1&gt;
+        &lt;p&gt;
+          Want to get started? Looking for a way to do things? Here
+          are the most important documentation resources needed to
+          work with Robot Framework. Notice that
+          individual &lt;a href="#test-libraries"&gt;test libraries&lt;/a&gt;
+          and &lt;a href="#tools"&gt;tools&lt;/a&gt; in the ecosystem have their
+          own documentation that is typically accessed via their
+          project pages.
+        &lt;/p&gt;
+        &lt;p&gt;
+          &lt;a target="_blank" href="https://github.com/robotframework/robotframework.github.com"&gt;Let us know&lt;/a&gt; if there are useful links missing from the list.
+        &lt;/p&gt;
+
+        &lt;div class="links"&gt;
+          &lt;a class="active" href="#docs-getting-started"&gt;GETTING STARTED&lt;/a&gt;
+          &lt;a href="#docs-demos"&gt;DEMOS&lt;/a&gt;
+          &lt;a href="#docs-videos"&gt;VIDEOS&lt;/a&gt;
+          &lt;a href="#docs-articles"&gt;ARTICLES&lt;/a&gt;
+          &lt;div class="marker" style="left: 370px;"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div id="docs-getting-started" class="external-links active"&gt;
+
+          &lt;div class="column half"&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/robotframework/robotframework/blob/master/INSTALL.rst"&gt;Installation Instructions&lt;/a&gt;
+              If you are familiar with Python and pip, just run &lt;span class="command"&gt;pip install robotframework&lt;/span&gt;. Notice that external libraries and tools need to be installed separately.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://www.slideshare.net/pekkaklarck/robot-framework-introduction"&gt;Introduction Slides&lt;/a&gt;
+              Generic Robot Framework introduction slides.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/robotframework/QuickStartGuide/blob/master/QuickStart.rst"&gt;Quick Start Guide&lt;/a&gt;
+              Introduces the most important features of Robot Framework and acts as an executable demo.
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+
+          &lt;div class="column half"&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://robotframework.org/robotframework/#user-guide"&gt;User Guide&lt;/a&gt;
+              Reference manual explaining all Robot Framework features in detail.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/robotframework/HowToWriteGoodTestCases/blob/master/HowToWriteGoodTestCases.rst"&gt;How to write good test cases&lt;/a&gt;
+              Guidelines for writing good test cases using Robot Framework.
+            &lt;/div&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://www.slideshare.net/pekkaklarck/robot-framework-dos-and-donts"&gt;Dos And Don'ts&lt;/a&gt;
+              Presentation loosely based on the above how-to.
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+
+          &lt;div class="column full"&gt;
+
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://robot-framework.readthedocs.org/en/latest/"&gt;Public API&lt;/a&gt;
+              Public API for writing your own tools against Robot Framework.
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;div id="docs-demos" class="external-links"&gt;
+
+          &lt;div class="column half"&gt;
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://bitbucket.org/robotframework/webdemo"&gt;Web Demo&lt;/a&gt;
+              Demonstrates how to create tests and higher level keywords. The system under test is a simple web page that is tested using Selenium2Library.
+            &lt;/div&gt;
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://code.google.com/p/atdd-with-robot-framework/"&gt;ATDD with Robot Framework&lt;/a&gt;
+              How to use Robot Framework for Acceptance Test Driven Development (ATDD) a.k.a. Specification by Example.
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class="column half"&gt;
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://bitbucket.org/robotframework/robotdemo"&gt;Robot Demo&lt;/a&gt;
+              Demonstrates how to create tests and test libraries. The system under test is a simple calculator that is tested using a custom library.
+            &lt;/div&gt;
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://github.com/robotframework/QuickStartGuide/blob/master/QuickStart.rst"&gt;Quick Start Guide&lt;/a&gt;
+              Introduces the most important features of Robot Framework and acts as an executable demo.
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class="column full"&gt;
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="https://bitbucket.org/robotframework/cdemo"&gt;Using C with Robot Framework&lt;/a&gt;
+              This simple example demonstrates how to use C language from Robot Framework test libraries.
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+
+
+        &lt;div id="docs-videos" class="external-links cf"&gt;
+
+          &lt;div class="column one-thirds"&gt;
+            &lt;div class="link"&gt;&lt;iframe width="300" height="169" frameborder="0" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" src="//player.vimeo.com/video/93124154"&gt;&lt;/iframe&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="column one-thirds"&gt;
+            &lt;div class="link"&gt;&lt;iframe width="300" height="169" frameborder="0" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" src="//player.vimeo.com/video/94638895"&gt;&lt;/iframe&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="column one-thirds"&gt;
+            &lt;div class="link"&gt;&lt;iframe width="300" height="169" frameborder="0" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" src="//player.vimeo.com/video/96527858"&gt;&lt;/iframe&gt;&lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div id="youtube-playlist"&gt;
+            &lt;!-- Content fetched in robotframework.js --&gt;
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;div id="docs-articles" class="external-links"&gt;
+
+          &lt;div class="column half"&gt;
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://a-tdd.org"&gt;ATDD with Robot Framework&lt;/a&gt;
+              Acceptance Test-Driven Development with Robot Framework article by Craig Larman and Bas Vodde.
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="column half"&gt;
+            &lt;div class="link"&gt;
+              &lt;a target="_blank" href="http://eliga.fi/writings.html"&gt;Data-Driven and Keyword-Driven Test Automation Frameworks&lt;/a&gt;
+              Master's Thesis by Pekka Klärck (né Laukkanen) that introduced Robot Framework concept.
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;div id="support-contact" class="row green"&gt;
+
+      &lt;div class="content-area"&gt;
+        &lt;h1 class="row-header"&gt;SUPPORT &amp;amp; CONTACT&lt;/h1&gt;
+        &lt;div class="slogan"&gt;The lists, channels, feed and blogs you want to know about&lt;/div&gt;
+
+        &lt;div class="row contact-icons"&gt;
+          &lt;div class="content-area"&gt;
+            &lt;div class="column one-thirds"&gt;
+              &lt;div id="mail" class="contact-icon"&gt;&lt;/div&gt;
+              &lt;a target="_blank" href="http://groups.google.com/group/robotframework-users"&gt;robotframework-users&lt;/a&gt;
+              &lt;p&gt;Community mailing list.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="column one-thirds"&gt;
+              &lt;div id="chat" class="contact-icon"&gt;&lt;/div&gt;
+              &lt;a target="_blank" href="http://webchat.freenode.net/?channels=robotframework&amp;amp;prompt=1"&gt;#robotframework&lt;/a&gt;
+              &lt;p&gt;#robotframework IRC channel on freenode.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="column one-thirds"&gt;
+              &lt;div id="slack" class="contact-icon"&gt;&lt;/div&gt;
+              &lt;a target="_blank" href="https://robotframework-slack.herokuapp.com/"&gt;Slack&lt;/a&gt;
+              &lt;p&gt;Robot Framework Slack community.&lt;/p&gt;
+
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="row contact-icons no-top-padding"&gt;
+          &lt;div class="content-area"&gt;
+
+            &lt;div class="column full"&gt;
+              &lt;div id="twitter" class="contact-icon"&gt;&lt;/div&gt;
+              &lt;a target="_blank" href="http://twitter.com/robotframework"&gt;@robotframework&lt;/a&gt;
+              &lt;p&gt;Announcements in Twitter.&lt;/p&gt;
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="row contact-icons no-top-padding"&gt;
+          &lt;div class="content-area"&gt;
+
+            &lt;div class="column full"&gt;
+              &lt;div id="report-issue" class="contact-icon"&gt;&lt;/div&gt;
+              &lt;a target="_blank" href="https://github.com/robotframework/robotframework/issues"&gt;Robot Framework issue tracker&lt;/a&gt;
+              &lt;p&gt;
+                Notice that external libraries and tools developed as separate projects have their own issue trackers.
+              &lt;/p&gt;
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="row" id="contact-links"&gt;
+          &lt;div class="content-area"&gt;
+
+            &lt;div class="column half"&gt;
+              &lt;div&gt;
+                &lt;h2 class="contact-links-heading"&gt;MAILING LISTS&lt;/h2&gt;
+                &lt;ul class="contact-links-list"&gt;
+                  &lt;li&gt;
+                    &lt;a target="_blank" href="http://groups.google.com/group/robotframework-users"&gt;robotframework-users&lt;/a&gt;
+                    &lt;p&gt;Community mailing list.&lt;/p&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a target="_blank" href="http://groups.google.com/group/robotframework-ja"&gt;robotframework-ja&lt;/a&gt;
+                    &lt;p&gt;Japanese users &amp;amp; support.&lt;/p&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a target="_blank" href="http://groups.google.com/group/robotframework-cn"&gt;robotframework-cn&lt;/a&gt;
+                    &lt;p&gt;Chinese users &amp;amp; support.&lt;/p&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a target="_blank" href="http://groups.google.com/group/robotframework-devel" title=""&gt;robotframework-devel&lt;/a&gt;
+                    &lt;p&gt;Contributors and developers of the Robot Framework ecosystem.&lt;/p&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;a target="_blank" href="http://groups.google.com/group/robotframework-announce"&gt;robotframework-announce&lt;/a&gt;
+                    &lt;p&gt;Just release announcements, nothing more.&lt;/p&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class="column half"&gt;
+              &lt;div&gt;
+                  &lt;h2 class="contact-links-heading"&gt;BLOGS &amp;amp; WEB&lt;/h2&gt;
+                  &lt;ul class="contact-links-list"&gt;
+                    &lt;li&gt;
+                      &lt;a target="_blank" href="http://robotframework.org"&gt;robotframework.org&lt;/a&gt;
+                      &lt;p&gt;Home of the Robot.&lt;/p&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                      &lt;a target="_blank" href="http://hereberobots.blogspot.fi/"&gt;Here be Robots!&lt;/a&gt;
+                      &lt;p&gt;Official Roblog.&lt;/p&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                      &lt;a target="_blank" href="http://blog.codecentric.de/en/category/agile/agile-testing/"&gt;Codecentric / Agile Testing&lt;/a&gt;
+                      &lt;p&gt;Robot Framework and Agile testing related blog posts by Codecentric.&lt;/p&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                      &lt;a target="_blank" href="http://www.linkedin.com/groups/Robot-Framework-3710899"&gt;LinkedIn&lt;/a&gt;
+                      &lt;p&gt;Robot Framework group in LinkedIn.&lt;/p&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                      &lt;a target="_blank" href="http://automated-testing.info/category/robot-framework"&gt;AT.info&lt;/a&gt;
+                      &lt;p&gt;Robot Framework help forum по-русски.&lt;/p&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                      &lt;a target="_blank" href="http://poliarush.com/trainings/robotframework"&gt;Mykhailo Poliarush&lt;/a&gt;
+                      &lt;p&gt;Commercial Robot Framework training по-русски.&lt;/p&gt;
+                    &lt;/li&gt;
+                  &lt;/ul&gt;
+
+              &lt;/div&gt;
+
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;div id="end" class="row"&gt;
+      &lt;h1 class="row-header"&gt;THAT'S ROBOT FRAMEWORK&lt;/h1&gt;
+      &lt;div class="slogan"&gt;&lt;a target="_blank" href="http://robotframework.org"&gt;robotframework.org&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+  
+
+&lt;/body&gt;&lt;/html&gt;</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20161205 14:32:16.268" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20161205 14:32:16.268" starttime="20161205 14:32:15.592"></status>
+</kw>
+<msg timestamp="20161205 14:32:16.269" level="FAIL">Page should have contained text 'Robot Framewrk' but did not</msg>
+<status status="FAIL" endtime="20161205 14:32:16.269" starttime="20161205 14:32:15.364"></status>
+</kw>
+<doc>A sample test.</doc>
+<status status="FAIL" endtime="20161205 14:32:16.284" critical="yes" starttime="20161205 14:32:12.303">Page should have contained text 'Robot Framewrk' but did not</status>
+</test>
+<status status="FAIL" endtime="20161205 14:32:16.288" starttime="20161205 14:32:12.299"></status>
+</suite>
+<status status="FAIL" endtime="20161205 14:32:16.291" starttime="20161205 14:32:08.888"></status>
+</suite>
+<status status="FAIL" endtime="20161205 14:32:16.297" starttime="20161205 14:32:01.334"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="3">Critical Tests</stat>
+<stat fail="1" pass="3">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="SuiteA" pass="3">SuiteA</stat>
+<stat fail="0" id="s1-s1" name="SampleRobotFrameworkTest" pass="2">SuiteA.SampleRobotFrameworkTest</stat>
+<stat fail="1" id="s1-s2" name="SuiteB" pass="1">SuiteA.SuiteB</stat>
+<stat fail="0" id="s1-s2-s1" name="SampleRobotFrameworkTest" pass="1">SuiteA.SuiteB.SampleRobotFrameworkTest</stat>
+<stat fail="1" id="s1-s2-s2" name="SampleRobotFrameworkTestNegative" pass="0">SuiteA.SuiteB.SampleRobotFrameworkTestNegative</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

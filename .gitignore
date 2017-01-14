@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.idea
+*.orig
+*.log
+build/
+dist/
+qcri.egg-info/
