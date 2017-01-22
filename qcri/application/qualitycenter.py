@@ -1,16 +1,9 @@
-
-
-# pylint: disable=I0011, no-member
-
-from datetime import datetime
-import logging
-import os
-import zipfile
-import pywintypes
-from win32com.client import Dispatch
-
-
 """
+QC OTA API
+
+Test Result dictionary
+----
+
 tests:
     name
     status
@@ -20,7 +13,6 @@ tests:
     exec_date
     exec_time
     bug
-
     steps:
         name
         status
@@ -29,10 +21,21 @@ tests:
         actual
 """
 
+# pylint: disable=I0011, no-member
+
+from datetime import datetime
+import fnmatch
+import logging
+import os
+import tempfile
+import zipfile
+import pywintypes
+from win32com.client import Dispatch
+
 
 LOG = logging.getLogger(__name__)
 
-TDATT_FILE = 1  # a data file attachment.
+TDATT_FILE = 1  # data file attachment.
 
 
 def connect(
@@ -56,7 +59,7 @@ def connect(
 
 def disconnect(qcc):
     """
-    make sure the quality center connection is closed
+    Make sure the quality center connection is closed
     """
     if qcc is None:
         return
@@ -97,7 +100,7 @@ def get_qc_folder(qcc, folder, create=True):
         raise ValueError(folder)
 
     # if folder is there return it, otherwise walk path from root creating
-    # folder if needed
+    # folders if needed
     child = None
     try:
         child = treemgr.NodeByPath(folder)
@@ -272,18 +275,37 @@ def import_test_result(
     return True
 
 
-def attach_report(qcc, local_path, qcdir, attachname):
+def attach_report(qcc, pardir, attachments, qcdir, attachname):
     """
     Zip the folder at local_path and upload it to the attachments of qcdir.
 
     """
+    # qc
     fldr = '/'.join(['Root', qcdir])
     fldr = os.path.normpath(fldr)
     fldr = fldr.replace('/', '\\')
     fldr = get_qc_folder(qcc, fldr)
     afactory = fldr.Attachments
     attach = afactory.AddItem(None)
-    zipfileloc = _zipfolder(local_path, attachname)
+
+    # local
+    zipfileloc = os.path.join(tempfile.gettempdir(), attachname)
+    zipf = zipfile.ZipFile(zipfileloc, 'w', zipfile.ZIP_DEFLATED)
+
+    for root, dirnames, filenames in os.walk(pardir):
+        for filepat in attachments:
+            print('looking @ filepat: {}'.format(filepat))
+            for matched in fnmatch.filter(filenames, filepat):
+                print('adding file: {}'.format(matched))
+                filepath = os.path.join(root, matched)
+                zipf.write(filepath, os.path.basename(filepath))
+            for matched in fnmatch.filter(dirnames, filepat):
+                print('adding folder: {}'.format(matched))
+                filepath = os.path.join(root, matched)
+                zipf.write(filepath, os.path.basename(filepath))
+
+    zipf.close()
+
     attach.FileName = zipfileloc.replace('/', '\\')
     attach.Type = TDATT_FILE
     attach.Post()

@@ -86,7 +86,7 @@ def _handle_command(args):
         rr = gui.QcriGui(cfg)
         rr.mainloop()
         return
-    use_history = cfg.getboolean('DEFAULT', 'history')
+    use_history = cfg.getboolean('main', 'history')
     hist = importer.load_history() if use_history else None
     try:
         for opt in options:
@@ -97,7 +97,7 @@ def _handle_command(args):
         return
     if use_history:
         importer.save_history(hist)
-    parser = _get_parser(args.source)
+    parser = _get_parser(args.source, cfg)
     if parser is None:
         LOG.error('parser not found for source: %s', args.source)
         return
@@ -149,7 +149,7 @@ def _set_argument(args, option_pair, hist=None):
             break
 
 
-def _get_parser(filepath):
+def _get_parser(filepath, cfg):
     """
     Get a list of valid parsers for file at filepath. If only one exists,
     use that, otherwise ask which one to use.
@@ -158,7 +158,7 @@ def _get_parser(filepath):
     if not os.path.isfile(filepath):
         LOG.error('File not found: %s', filepath)
         return
-    valid_parsers = importer.get_parsers(filepath)
+    valid_parsers = importer.get_parsers(filepath, cfg)
     if not valid_parsers:
         LOG.error('No parsers found for file: %s', filepath)
         return

@@ -75,11 +75,12 @@ class QcriGui(tk.Tk):
 
     def __init__(self, cfg):
         tk.Tk.__init__(self)
-        self.cfg = cfg
+        self.cfg = cfg  # ConfigParser
 
-        self.qcc = None
+        self.qcc = None  # the Quality Center connection
         self.valid_parsers = {}
-        self._cached_tests = {}
+        self._cached_tests = {}  # for the treeview
+        self._results = {}  # test results
         self.dir_dict = {}
         self.bug_dict = {}
 
@@ -87,6 +88,7 @@ class QcriGui(tk.Tk):
         self.title('QC Results Importer')
         center(self, 1200, 700)
 
+        # tkinter widgets
         self.menubar = None
         self.remote_path = None
         self.choose_parser = None
@@ -97,7 +99,6 @@ class QcriGui(tk.Tk):
         self.runresults_tree = None
         self.runresultsview = None
         self.header_frame = None
-        self.parser = None
         self.qc_connected_frm = None
         self.qc_disconnected_frm = None
         self.link_bug = None
@@ -108,6 +109,7 @@ class QcriGui(tk.Tk):
         self.runresultsvar = tk.StringVar()
         self.qc_conn_status = tk.BooleanVar()
 
+        # build the gui        
         self._make()
 
         # style = ttk.Style()
@@ -205,7 +207,7 @@ class QcriGui(tk.Tk):
 
         # QC Disconnected Frame
         self.qc_disconnected_frm = tk.Frame(self.header_frame)
-        if self.cfg.getboolean('DEFAULT', 'history'):
+        if self.cfg.getboolean('main', 'history'):
             hist = importer.load_history()
         else:
             hist = None
@@ -301,7 +303,8 @@ class QcriGui(tk.Tk):
         if not filename:
             return
         self.runresultsvar.set(filename)
-        valid_parsers = importer.get_parsers(filename)
+
+        valid_parsers = importer.get_parsers(filename, self.cfg)
         if not valid_parsers:
             messagebox.showerror(
                 'Unknown Format', 'Unable to parse this file. '
@@ -322,26 +325,24 @@ class QcriGui(tk.Tk):
         filepath = self.runresultsvar.get()
         if not filepath:
             self.runresultsview.clear()
-            self.refresh_tests()
+            self.runresultsview.refresh()
             return
         parser_name = self.choose_parser.get()
         if not parser_name:
             self.runresultsview.clear()
-            self.refresh_tests()
+            self.runresultsview.refresh()
             return
         parser = self.valid_parsers[parser_name]
         results = []
         try:
-            results = importer.parse_results(parser, filepath, self.cfg)
+            self.results = importer.parse_results(parser, filepath, self.cfg)
         except importer.ParserError as ex:
             messagebox.showerror(
                 'Parser Error', 'An error occurred while parsing. '
                 'View log for details.')
             LOG.exception(ex)
-        self.parser = parser
-        # temporary indices
-        tests = results['tests']
-        self.runresultsview.populate(tests)
+            
+        self.runresultsview.populate(self.results['tests'])
 
     def _on_test_result_selected(self, dummy_event=None):
         has_failed_test = self.runresultsview.get_selection(failed=True)
@@ -423,10 +424,11 @@ class QcriGui(tk.Tk):
         assert qcdir.startswith('Root\\'), qcdir
         # remove "Root\"
         qcdir = qcdir[5:]
-        results = {
-            'filename': self.runresultsvar.get(),
-            'tests': [self.runresultsview.tests[row] for row in selected_rows]
-        }
+
+        results = self.results.copy()
+        results['tests'] = [self.runresultsview.tests[row]
+                            for row in selected_rows]
+
         result = messagebox.askyesno(
             'Confirm',
             ('Are you sure you want to upload to the following '
@@ -447,7 +449,7 @@ class QcriGui(tk.Tk):
         """
         called by login window
         """
-        use_history = self.cfg.getboolean('DEFAULT', 'history')
+        use_history = self.cfg.getboolean('main', 'history')
         if use_history:
             hist = importer.load_history()
             importer.update_history(hist, logincfg)
@@ -737,6 +739,9 @@ class TestResultsView(tk.Frame):
     @property
     def tests(self):
         return self._cache
+
+    def clear(self):
+        self._cache.clear()
 
     def get_selection(self, failed=False):
         selection = self.tree.selection()

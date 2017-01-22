@@ -6,7 +6,6 @@ The UFT Run Results parser.
 # pylint: disable=I0011, redefined-builtin, invalid-name, no-member
 
 import os
-import logging
 from datetime import datetime
 import xlrd
 from lxml import etree
@@ -18,7 +17,15 @@ except NameError:
     pass
 
 
-LOG = logging.getLogger(__name__)
+ATTACH_LIST = [
+    'Default.xls',
+    'GeneralInfo.ini',
+    'Results.qtp',
+    'Resources/',
+    'Icons/',
+    'Act*'
+]
+
 _SHEET_NAME = 'Global'
 _TEST_STEPS_QUERY = '''.//NodeArgs[
     (@eType='User' and (

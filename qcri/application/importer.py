@@ -3,16 +3,17 @@ Importer
 """
 
 import logging
+import io
 import os
 import random
 import string
-import pkgutil
 import tempfile
 import json
 import configparser
 import codecs
+import importlib
 from collections import defaultdict
-from qcri import parsers
+from distutils.util import strtobool
 from qcri.application import qualitycenter
 
 
@@ -21,6 +22,24 @@ logging.basicConfig(
     format='%(levelname)s <%(funcName)s> %(message)s',
     level=logging.INFO)
 LOG = logging.getLogger(__name__)
+
+DEFAULT_CFG = """
+[main]
+history=true
+
+[parsers]
+robotframework=true
+uftrunreport=true
+seleniumtestresults=true
+
+[uftrunreport]
+test_column=test
+description_column=description
+subject_column=subject
+suite_column=suite
+replace_warning_with_passed=true
+
+"""
 
 
 class ParserError(Exception):
@@ -75,7 +94,6 @@ def update_history(hist, new_items):
         # skip password
         if key == 'password':
             continue
-        LOG.debug('item: %s, %s', key, value)
         try:
             hist[key].remove(value)
         except ValueError:
@@ -88,18 +106,19 @@ def is_parser(parser):
     """
     Parsers are modules with a parse function dropped in the 'parsers' folder.
     When attempting to parse a file, QCRI will load and try all parsers,
-    returning a list of the ones that worked. Is this safe or a good method?
+    returning a list of the ones that worked.
+    todo: load them from config
     """
-    return hasattr(parser, 'parse')
+    return hasattr(parser, 'parse') and hasattr(parser, 'ATTACH_LIST')
 
 
-def get_parsers(filename):
+def get_parsers(filename, cfg):
     """
     Returns a list of valid parsers for filename.
     """
     if not os.path.isfile(filename):
         return []
-    avail_parsers = _load_parsers()
+    avail_parsers = _load_parsers(cfg)
     valid_parsers = []
     for parser in avail_parsers:
         try:
@@ -112,18 +131,19 @@ def get_parsers(filename):
     return valid_parsers
 
 
-def load_config(config_filename='config.ini'):
+def load_config(config_filename='qcri.cfg'):
     """
     Returns the config.
     """
-    parent = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
+    parent = os.path.abspath(os.path.expanduser('~'))
     config_filepath = os.path.join(parent, config_filename)
-    LOG.info('loading config: %s', config_filepath)
-    if not os.path.isfile(config_filepath):
-        raise IOError('config.ini file not found: {}'.format(config_filepath))
     cfg = configparser.ConfigParser()
-    with codecs.open(config_filepath, 'r', encoding='utf-8') as filed:
-        cfg.read_file(filed)
+
+    if os.path.isfile(config_filepath):
+        with codecs.open(config_filepath, 'r', encoding='utf-8') as filed:
+            cfg.read_file(filed)
+    else:
+        cfg.readfp(io.BytesIO(DEFAULT_CFG))
     return cfg
 
 
@@ -145,7 +165,8 @@ def parse_results(parser, filename, cfg=None):
     tests = parser.parse(filename, options)
     return {
         'filename': filename,
-        'tests': tests
+        'tests': tests,
+        'attach_list': parser.ATTACH_LIST
     }
 
 
@@ -158,25 +179,7 @@ def import_results(qcc, qcdir, results, attach_report=False):
     serial = None
     tests = results['tests']
     if attach_report:
-        # insert a serial step for each test
-        serial = ''.join(random.choice(string.ascii_lowercase + string.digits)
-                         for _ in range(int(6)))
-        for test in tests:
-            steps = test['steps']
-            try:
-                exec_date = steps[0]['exec_date']
-                exec_time = steps[0]['exec_time']
-            except (IndexError, KeyError):
-                exec_date = ''
-                exec_time = ''
-            serial_step = {
-                'name': 'Attachment Serial',
-                'status': 'N/A',
-                'description': serial,
-                'exec_date': exec_date,
-                'exec_time': exec_time
-            }
-            steps.insert(0, serial_step)
+        serial = _insert_serial_step(tests)
 
     _errors = []
     for test in tests:
@@ -201,19 +204,41 @@ def import_results(qcc, qcdir, results, attach_report=False):
         # remove the serial step inserted earlier
         for test in tests:
             test['steps'].pop(0)
-        filename = results['filename']
-        results_fldr = os.path.split(filename)[0]
-        LOG.debug('attaching results folder: %s', results_fldr)
-        qualitycenter.attach_report(qcc, results_fldr, qcdir,
-                                    'report-{}.zip'.format(serial))
+        pardir, filename = os.path.split(results['filename'])
+        attachments = results['attach_list'] + [filename]
+        qualitycenter.attach_report(
+            qcc, pardir, attachments, qcdir, 'report-{}.zip'.format(serial))
 
 
-def _load_parsers():
+def _insert_serial_step(tests):
+    serial_length = 8
+
+    serial = ''.join(random.choice(string.ascii_lowercase + string.digits)
+                     for _ in range(int(serial_length)))
+    for test in tests:
+        steps = test['steps']
+        try:
+            exec_date = steps[0]['exec_date']
+            exec_time = steps[0]['exec_time']
+        except (IndexError, KeyError):
+            exec_date = ''
+            exec_time = ''
+        serial_step = {
+            'name': 'Attachment Serial',
+            'status': 'N/A',
+            'description': serial,
+            'exec_date': exec_date,
+            'exec_time': exec_time
+        }
+        steps.insert(0, serial_step)
+    return serial
+
+
+def _load_parsers(cfg):
     valid_parsers = []
-    for importer, modname, ispkg in pkgutil.iter_modules(parsers.__path__):
-        if ispkg:
-            continue
-        parser = importer.find_module(modname).load_module(modname)
-        if is_parser(parser):
-            valid_parsers.append(parser)
+    options = cfg.options('parsers')
+    for option in options:
+        if strtobool(cfg.get('parsers', option)):
+            mod = importlib.import_module('qcri.parsers.' + option)
+            valid_parsers.append(mod)
     return valid_parsers

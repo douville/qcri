@@ -9,6 +9,11 @@ from datetime import datetime
 from lxml import etree
 from qcri.application.importer import ParserError
 
+ATTACH_LIST = [
+    'log.html',
+    'report.html',
+    '*.png'
+]
 
 def parse(filename, options=None):
     """
