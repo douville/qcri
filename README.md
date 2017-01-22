@@ -18,8 +18,10 @@ QCRI imports test results from [multiple testing tools](#supported-test-result-f
 * HP ALM Connectivity
 
 
-## Installation Options
+## Installation
 * [Download](https://github.com/douville/qcri/releases/) executable made with [PyInstaller](http://www.pyinstaller.org)
+
+    or
 
 * `pip install qcri`
 
